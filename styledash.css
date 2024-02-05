@@ -1,39 +1,35 @@
-
-body{
+body {
     background: url(images/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height:100vh;
-   
+    height: 100vh;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-.cont_carro{
-    width: 400px;
+.cont_carro, .cont_brazo, .cont_dron {
+    width: calc(33.33% - 80px); /* 33.33% del ancho menos el margen (80px) entre elementos */
+    max-width: 400px;
     height: 600px;
     overflow: hidden;
     position: relative;
-    margin: 40px;
+    margin: 20px; /* Se ajustó el margen */
     border-radius: 20px;
     box-shadow: 10px 10px 10px black;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.cont_carro:hover{
-    transform: scale(1.1);
-    box-shadow: 13px 15px 37px black;
-}
-
-.cont_carro img{
+.cont_carro img, .cont_brazo img, .cont_dron img {
     width: 100%;
     height: 100%;
 }
 
-.cont_carro p{
+.cont_carro p, .cont_brazo p, .cont_dron p {
     font-size: 2.6rem;
     color: white;
     position: absolute;
@@ -43,68 +39,19 @@ body{
     text-shadow: 0px 0px 10px rgba(255, 215, 0);
 }
 
-.cont_brazo{
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-    margin: 40px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px black;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.cont_brazo:hover{
-    transform: scale(1.1);
-    box-shadow: 13px 15px 37px black;
-}
-
-.cont_brazo img{
-    width: 100%;
-    height: 100%;
-}
-
-.cont_brazo p{
-    font-size: 2.6rem;
-    color: white;
-    position: absolute;
+.cont_brazo p {
     top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-shadow: 0px 0px 8px rgb(0, 0, 0);
 }
 
-.cont_dron{
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
-    position: relative;
-    margin: 40px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px black;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.cont_dron p {
+    top: 10%;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0);
 }
 
-.cont_dron:hover{
+.cont_carro:hover, .cont_brazo:hover, .cont_dron:hover {
     transform: scale(1.1);
     box-shadow: 13px 15px 37px black;
-}
-
-.cont_dron img{
-    width: 100%;
-    height: 100%;
-}
-
-.cont_dron p{
-    font-size: 2.6rem;
-    color: white;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 0px 0px 10px rgba(255, 215, 0);
 }
 
 footer {
@@ -116,4 +63,17 @@ footer {
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+    .cont_carro, .cont_brazo, .cont_dron {
+        width: calc(50% - 40px); /* 50% del ancho menos el margen (40px) entre elementos */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cont_carro, .cont_brazo, .cont_dron {
+        width: calc(100% - 40px); /* 100% del ancho menos el margen (40px) entre elementos */
+    }
 }
