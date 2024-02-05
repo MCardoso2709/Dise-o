@@ -1,16 +1,13 @@
 body{
-   background: url(images/fondo.jpg);
+    background: url(images/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0; /* Ajuste para eliminar el margen predeterminado del cuerpo */
+    height:100vh;
    
 }
 
-.contenedor {
+.contenedor{
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
-    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
 .cont_carro{
