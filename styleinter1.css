@@ -164,3 +164,9 @@ nav lu li a:hover{
         max-width: none; /* Eliminado el ancho máximo para ocupar el ancho completo en pantallas más pequeñas */
     }
 }
+
+
+    .img_planos, .img_modelos, .img_calculos {
+        max-width: none; /* Eliminado el ancho máximo para ocupar el ancho completo en pantallas más pequeñas */
+    }
+}
