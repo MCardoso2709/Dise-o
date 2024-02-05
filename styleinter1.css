@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
- background: url(img/rovert.jpg);
+ background: url(images/rovert.jpg);
  background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
@@ -40,15 +40,15 @@ body {
 
 
 .img_planos {
-    background-image: url(img/img_representacion_planos.jpg);
+    background-image: url(images/img_representacion_planos.jpg);
 }
 
 .img_modelos {
-    background-image: url(img/img_modelado.jpg);
+    background-image: url(images/img_modelado.jpg);
 }
 
 .img_calculos {
-    background-image: url(img/img_calculos.jpg);
+    background-image: url(images/img_calculos.jpg);
 }
 
 header img {
