@@ -6,8 +6,10 @@ body{
    
 }
 
-.contenedor{
+.contenedor {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
 .cont_carro{
