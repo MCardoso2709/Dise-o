@@ -1,47 +1,38 @@
-body {
+body{
     background: url(images/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0; /* Ajuste para eliminar el margen predeterminado del cuerpo */
+    height:100vh;
+   
 }
 
-header {
-    text-align: center; /* Centra el contenido del encabezado */
-    padding: 20px 0; /* Añade espacio alrededor del contenido del encabezado */
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: white;
-}
-
-.contenedor {
+.contenedor{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.cont_carro, .cont_brazo, .cont_dron {
-    width: calc(33.33% - 40px); /* 33.33% del ancho menos el margen (40px) entre elementos */
-    max-width: 400px;
+.cont_carro{
+    width: 400px;
     height: 600px;
     overflow: hidden;
     position: relative;
-    margin: 20px;
+    margin: 40px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px black;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.cont_carro img, .cont_brazo img, .cont_dron img {
+.cont_carro:hover{
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+}
+
+.cont_carro img{
     width: 100%;
     height: 100%;
 }
 
-.cont_carro p, .cont_brazo p, .cont_dron p {
+.cont_carro p{
     font-size: 2.6rem;
     color: white;
     position: absolute;
@@ -51,19 +42,68 @@ h1 {
     text-shadow: 0px 0px 10px rgba(255, 215, 0);
 }
 
-.cont_brazo p {
+.cont_brazo{
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cont_brazo:hover{
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black;
+}
+
+.cont_brazo img{
+    width: 100%;
+    height: 100%;
+}
+
+.cont_brazo p{
+    font-size: 2.6rem;
+    color: white;
+    position: absolute;
     top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-shadow: 0px 0px 8px rgb(0, 0, 0);
 }
 
-.cont_dron p {
-    top: 10%;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0);
+.cont_dron{
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.cont_carro:hover, .cont_brazo:hover, .cont_dron:hover {
+.cont_dron:hover{
     transform: scale(1.1);
     box-shadow: 13px 15px 37px black;
+}
+
+.cont_dron img{
+    width: 100%;
+    height: 100%;
+}
+
+.cont_dron p{
+    font-size: 2.6rem;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 10px rgba(255, 215, 0);
 }
 
 footer {
@@ -71,21 +111,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #333; /* Puedes ajustar el color a tu preferencia */
     color: white;
     padding: 10px;
     text-align: center;
-}
-
-/* Media queries para dispositivos más pequeños */
-@media screen and (max-width: 768px) {
-    .cont_carro, .cont_brazo, .cont_dron {
-        width: calc(50% - 40px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .cont_carro, .cont_brazo, .cont_dron {
-        width: calc(100% - 40px);
-    }
 }
