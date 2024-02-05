@@ -8310,7 +8310,7 @@ button.bg-dark:focus {
   }
   .mt-lg-4,
   .my-lg-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 2rem !important;
   }
   .mr-lg-4,
   .mx-lg-4 {
@@ -8744,10 +8744,12 @@ button.bg-dark:focus {
 
 .text-left {
   text-align: left !important;
+  padding-top: 1.5em;
 }
 
 .text-right {
   text-align: right !important;
+  padding-top: 0.8em;
 }
 
 .text-center {

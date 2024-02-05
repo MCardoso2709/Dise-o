@@ -69,6 +69,35 @@ header {
     padding: 0em 2em 0 2em;
 }
 
+.live-button {
+        background-color: rgba(221, 37, 37, 0.623);
+        border-radius: 16px;
+        padding: 10px 30px;
+        position: relative;
+        left: 50px;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .live-button-text {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    .triangle {
+        width: 20;
+        height: 5;
+        border-left: 0px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 12px solid white;
+        position: absolute;
+        top: 35%;
+        right: 15%; /* ajusta este valor según sea necesario */
+        transform: translateY(-50%);
+        transform: rotate(-140deg);
+    }
+
 .top-bar_sub .btn-primary {
     color: #000;
     background-color: #00bce400;
