@@ -265,13 +265,18 @@ header{
 
 /* Estilos para cada tarjeta de líderes */
 .cardlideres {
-  width: 80%; /* Ancho de las tarjetas */
+  width: 1030px; /* Nuevo ancho de las tarjetas */
+  height: 240px; /* Nuevo alto de las tarjetas */
   margin-bottom: 20px;
-  border: 1px solid #ffffff; /* Borde para las tarjetas */
-  border-radius: 10px; /* Borde redondeado */
-    background-color: white; /* Fondo blanco */
-
-  overflow: hidden; /* Oculta el contenido que se desborda */
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+.cardlideres .card-content img {
+  width: 240px; /* Ancho al 100% del contenedor */
+  height: 240px; /* Alto al 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionarla */
 }
 
 /* Estilos para el contenido de cada tarjeta */
