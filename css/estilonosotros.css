@@ -197,9 +197,7 @@ header{
         width: 100%; /* Ocupará todo el ancho en dispositivos móviles */
     }
 }
-.card-info .justificado {
-    text-align: justify;
-}
+
 
 .popup {
   position: fixed;
@@ -291,7 +289,10 @@ header{
 .card-info {
   padding: 20px; /* Espaciado interno de las descripciones */
   width: 60%; /* Ancho de la descripción */
+      text-align: justify;
+
 }
+
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
@@ -300,7 +301,9 @@ header{
   }
   .card-info {
       width: 70%; /* Ancho de la descripción en dispositivos móviles */
+      text-align: justify;
   }
+
 }
 
 
