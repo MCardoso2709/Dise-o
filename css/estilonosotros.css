@@ -197,6 +197,9 @@ header{
         width: 100%; /* Ocupará todo el ancho en dispositivos móviles */
     }
 }
+.card-info .justificado {
+    text-align: justify;
+}
 
 .popup {
   position: fixed;
