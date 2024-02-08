@@ -279,6 +279,7 @@ header{
   object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionarla */
 }
 
+
 /* Estilos para el contenido de cada tarjeta */
 .card-content {
   display: flex;
