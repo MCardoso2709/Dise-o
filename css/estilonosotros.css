@@ -265,7 +265,7 @@ header{
 
 /* Estilos para cada tarjeta de líderes */
 .cardlideres {
-  width: 1030px; /* Nuevo ancho de las tarjetas */
+  width: 1200px; /* Nuevo ancho de las tarjetas */
   height: 240px; /* Nuevo alto de las tarjetas */
   margin-bottom: 20px;
   border: 1px solid #ffffff;
