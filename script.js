@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
         });
     });
+    
 
     cards.forEach(card => {
         card.addEventListener('click', function() {
