@@ -11,3 +11,4 @@ function paginaPlanos(){
 function paginaModelos(){
     window.location.href='galleryModelos.html';
 }
+console.log("hola");
