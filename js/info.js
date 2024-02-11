@@ -5,21 +5,14 @@ function mostrarInfo(elemento) {
 function ocultarInfo(elemento) {
     elemento.querySelector('.info').style.display = 'none';
 }
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona el botón por su id
-    var botonPlanos = document.getElementById("botonPlanos");
+// tuarchivo.js
 
-    // Agrega un evento de clic al botón que llama a la función paginaPlanos
-    botonPlanos.addEventListener("click", function() {
-        paginaPlanos();
-    });
-});
-function paginaPlanos(){
-    console.log('Redireccionando a galleryPlanos.html');
+document.getElementById('botonPlanos').addEventListener('click', function() {
+    // Cambia 'nuevaPagina.html' por la URL de la página a la que deseas redirigir
     window.location.href = 'galleryPlanos.html';
-}
-
-function paginaModelos(){
-    console.log('Redireccionando a galleryModelos.html');
+});
+document.getElementById('botonModelos').addEventListener('click', function() {
+    // Cambia 'nuevaPagina.html' por la URL de la página a la que deseas redirigir
     window.location.href = 'galleryModelos.html';
-}
+});
+
