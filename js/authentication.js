@@ -1,1 +1,1 @@
-import 'js/signInform.js'
+import './signInForm.js'
