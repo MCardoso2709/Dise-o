@@ -1,7 +1,7 @@
 /*CONTENEDOR 1 -CAMARA, GPS, GEMELO, FONDO*/
 
 body{
-    background-image: url(images/fondo_unico.jpg);
+    background-image: url(img/fondo_unico.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh;
