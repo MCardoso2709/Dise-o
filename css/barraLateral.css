@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#sidebar.active{
+    right:0;
+}
+#sidebar{
+    position:fixed;
+    width: 200px;
+    height: 100%;
+    background-color: gray;
+    padding: 0;
+    margin:0;
+    right: -200px;
+}
+#sidebar form{
+    color:rgba(230, 230, 230, .9);
+    text-align: center;
+    padding: 15px 10px;
+}
