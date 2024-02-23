@@ -69,6 +69,35 @@ header {
     padding: 0em 2em 0 2em;
 }
 
+.live-button {
+        background-color: rgba(221, 37, 37, 0.623);
+        border-radius: 16px;
+        padding: 10px 30px;
+        position: relative;
+        left: 50px;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .live-button-text {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    .triangle {
+        width: 20;
+        height: 5;
+        border-left: 0px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 12px solid white;
+        position: absolute;
+        top: 35%;
+        right: 15%; /* ajusta este valor según sea necesario */
+        transform: translateY(-50%);
+        transform: rotate(-140deg);
+    }
+
 .top-bar_sub .btn-primary {
     color: #000;
     background-color: #00bce400;
@@ -118,11 +147,11 @@ h1.logo-w3layouts a.navbar-brand {
 
 .navbar-light .navbar-nav .nav-link,
 .dropdown-item {
-    color: #828284;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 15px;
     letter-spacing: 2px;
-    margin: 0em 0.5em;
-    padding: 10px 25px;
+    margin: 0em 0em;
+    padding: 20px 5px;
     text-transform: uppercase;
 }
 
@@ -252,7 +281,8 @@ li.number-phone {
 ul.cart-inner-info li {
     display: inline-block;
     list-style: none;
-    margin-left: 2em;
+    margin-left: 0.5em;
+    margin-top: 12px;
 }
 
 .top-info ul li {
@@ -1903,8 +1933,8 @@ ul.links li a:hover {
         margin-right: -19px;
     }
     .navbar-light .navbar-nav .nav-link, .dropdown-item {
-        margin: 0em 0.5em;
-        padding: 10px 7px;
+        margin: 0em 0em;
+        padding: 20px 0px;
     }
     .carousel-caption {
       bottom: 6em;
