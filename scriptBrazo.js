@@ -1,3 +1,8 @@
+// BOTON PARA REGRESAR AL DASH
+document.getElementById('homeButton').addEventListener('click', function() {
+    window.location.href = 'dash.html'; // Redirige al usuario a dash.html cuando se hace clic en el botón
+});
+
 // Declarar una variable global para el objeto del gráfico de acelerómetro
 var acelerometroChart;
 
