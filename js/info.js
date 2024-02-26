@@ -15,4 +15,7 @@ document.getElementById('botonModelos').addEventListener('click', function() {
     // Cambia 'nuevaPagina.html' por la URL de la página a la que deseas redirigir
     window.location.href = 'galleryModelos.html';
 });
-
+document.getElementById('botonCalculos').addEventListener('click', function() {
+    // Cambia 'nuevaPagina.html' por la URL de la página a la que deseas redirigir
+    window.location.href = 'galleryCalculos.html';
+});

@@ -49,6 +49,31 @@ document.addEventListener('DOMContentLoaded', function () {
         // Agrega la imagen al contenedor
         imagenContainer.appendChild(imagen);
     }
+    var imagenContainer = document.getElementById('imagenContainer');
+
+    // Añade un evento de cambio de diapositiva (slide) al carrusel
+    swiper.on('slideChange', function () {
+        // Obtén la URL de la imagen de la diapositiva actual
+        var imagenActual = swiper.slides[swiper.activeIndex].querySelector('img').src;
+
+        // Actualiza la imagen grande en el contenedor
+        actualizarImagenGrande(imagenActual);
+    });
+
+    // Función para actualizar la imagen grande en el contenedor
+    function actualizarImagenGrande(src) {
+        // Limpia el contenido actual del contenedor
+        while (imagenContainer.firstChild) {
+            imagenContainer.removeChild(imagenContainer.firstChild);
+        }
+
+        // Crea la etiqueta img y establece el atributo src
+        var imagen = document.createElement('img');
+        imagen.src = src;
+
+        // Agrega la imagen al contenedor
+        imagenContainer.appendChild(imagen);
+    }
 });
 
 
