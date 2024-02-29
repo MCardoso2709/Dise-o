@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/barraLateral.css">
     <link rel="icon" href="images/logo.png">
 </head>
 
@@ -38,13 +39,33 @@
             </a>
         </div>
         <nav>
-	 <a href="index.html"> <i class="fa-solid fa-earth-americas"></i> Inicio </a>
-        <a href="Nosotros.html"> <i class="fa-solid fa-people-group"></i> Equipo <span class="sr-only">(current)</span> 
-	</a>
-        <a href="404.html"> <i class="fa-solid fa-robot"></i> Rovert </a>
-        <a href="intermedio1.html"> <i class="fa-solid fa-book-open"></i> Galeria </a>
-         <a href="dash.html"> <i class="fa-solid fa-user"></i> Sesión</a>
+          <a href="index.html"> <i class="fa-solid fa-earth-americas"></i> Inicio </a>
+          <a href="Nosotros.html"> <i class="fa-solid fa-people-group"></i> Equipo <span class="sr-only">(current)</span></a>
+          <a href="404.html"> <i class="fa-solid fa-robot"></i> Rovert </a>
+          <a href="intermedio1.html"> <i class="fa-solid fa-book-open"></i> Galeria </a>
+          <a class="toggleButton" href="#"> <i class="fa-solid fa-user"></i> </a>
+          <div id="sidebar">
+            <h2 class="text-title">Inicia Sesion</h2>
+            <div class="login">
+                <form id="login-form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="mb-2">Email</label>
+                        <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Contraseña</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordar Usuario</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Iniciar sesion</button>
+  
+                </form>
+          </div>
         </nav>
+        
     </header>
 
     <div class="informacion">
@@ -414,5 +435,7 @@
 	</footer>
 
     <script src="script.js"></script>
+    <script src="js/inicioSesion.js"></script>
+    <script src="js/authentication.js" type="module"></script>
 </body>
 </html>
