@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roverto</title>
+    <link rel="stylesheet" href="styleRoverto.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Velocidad', 80],
+        ]);
+
+        var options = {
+          width: 600, height: 180,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('medidores'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 1300); 
+      }
+    </script>
+</head>
+<body>
+    <div class="container1">
+        <div class="digital-twin">
+            <div class="gemelo-content" contenteditable="true">
+                <!-- Aquí puedes agregar contenido interactivo -->
+                <img src="img/rovert.gif" alt="GIF Interactivo">
+            </div>
+            <div class="cont_gemelo" id="contGemelo">
+                <!-- Variables de arriba -->
+                <div class="top-sensors">
+                    <!-- Variable 1: Temperatura -->
+                    <p>
+                        <img src="img/3.png" alt="Temperature Icon">
+                        <span class="sensor-value" id="temperatureValue"></span>
+                        <span class="sensor-units">°C</span>
+                        <br>
+                        <span class="sensor-description">Type temperature</span>
+                    </p>
+                    <!-- Variable 2: Presión -->
+                    <p>
+                        <img src="img/2.png" alt="Pressure Icon">
+                        <span class="sensor-value" id="pressureValue"></span>
+                        <span class="sensor-units">PSI</span>
+                        <br>
+                        <span class="sensor-description">Type pressure</span>
+                    </p>
+                </div>
+                <!-- Variables de abajo -->
+                <div class="bottom-sensors">
+                    <!-- Variable 3: Calidad de señal -->
+                    <p>
+                        <img src="img/4.png" alt="Signal Icon">
+                        <span class="sensor-value" id="signalQuality"></span>
+                        <span class="sensor-units">%</span>
+                        <br>
+                        <span class="sensor-description">Red 2.4 GHz</span>
+                    </p>
+                    <!-- Variable 4: Humedad -->
+                    <p>
+                        <img src="img/5.png" alt="Humidity Icon">
+                        <span class="sensor-value" id="humidityValue"></span>
+                        <span class="sensor-units">%</span>
+                        <br>
+                        <span class="sensor-description">Humidity Level</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <!-- Barras para controlar los grados de las articulaciones -->
+                <div id="medidores">
+
+                </div>
+                <div class="speedometer">
+                    <div class="speedometer__progress"></div>
+                    <div class="speedometer__needle"></div>
+                    <div class="speedometer__text">0 km/h</div>
+                </div>
+                <div class="temperature">
+                    <div class="temperature__progress"></div>
+                    <div class="temperature__needle"></div>
+                    <div class="temperature__text">0 °C</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="cont_mapa">
+            <img src="img/maps.jpg" alt="" class="mapa">
+        </div>  
+        <p>
+        <div class="container2">
+            <div class="cont_video">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/yhdL4jz74WM?si=YVWuJHsVBxJdQTIZ&autoplay=1&mute=1&loop=1&controls=0" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+            <div class="cont_sensores" id="contSensores">
+                <canvas id="acelerometroChart" width="400" height="400"></canvas>
+            </div>
+            
+        </div></p>
+    <div class="cont_menu" id="contMenu">
+            <a href="dash.html"><a href="dash.html"><button class="menu_button" id="homeButton"><img src="img/casa.jpg" alt="Home"></button></a>
+            <button class="menu_button" id="locationButton"><img src="img/ubicacion.jpg" alt="Location"></button>
+            <button class="menu_button" id="cameraButton"><img src="img/camara.jpg" alt="Camera"></button>
+            <a href="brazo.html"></a><button class="menu_button" id="carButton"><img src="img/astro2.jpg" alt="Car"></button>
+        </div>
+        
+
+    </div>
+    
+<script src="scriptRoverto.js"></script>
+
+
+</body>
+</html>
