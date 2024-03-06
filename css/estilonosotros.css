@@ -198,7 +198,6 @@ header{
     }
 }
 
-
 .popup {
   position: fixed;
   top: 50%;
@@ -265,20 +264,14 @@ header{
 
 /* Estilos para cada tarjeta de líderes */
 .cardlideres {
-  width: 1025px; /* Nuevo ancho de las tarjetas */
-  height: 240px; /* Nuevo alto de las tarjetas */
+  width: 80%; /* Ancho de las tarjetas */
   margin-bottom: 20px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  background-color: white;
-  overflow: hidden;
-}
-.cardlideres .card-content img {
-  width: 240px; /* Ancho al 100% del contenedor */
-  height: 240px; /* Alto al 100% del contenedor */
-  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionarla */
-}
+  border: 1px solid #ffffff; /* Borde para las tarjetas */
+  border-radius: 10px; /* Borde redondeado */
+    background-color: white; /* Fondo blanco */
 
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
 
 /* Estilos para el contenido de cada tarjeta */
 .card-content {
@@ -295,10 +288,7 @@ header{
 .card-info {
   padding: 20px; /* Espaciado interno de las descripciones */
   width: 60%; /* Ancho de la descripción */
-      text-align: justify;
-
 }
-
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
@@ -307,9 +297,7 @@ header{
   }
   .card-info {
       width: 70%; /* Ancho de la descripción en dispositivos móviles */
-      text-align: justify;
   }
-
 }
 
 

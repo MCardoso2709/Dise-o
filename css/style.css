@@ -155,6 +155,16 @@ h1.logo-w3layouts a.navbar-brand {
     text-transform: uppercase;
 }
 
+.navbar-light-p .navbar-nav .nav-link,
+.dropdown-item {
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 0em 0em;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
 .dropdown-item {
     margin: 0 !important;
     color: #777;
@@ -183,6 +193,15 @@ h1.logo-w3layouts a.navbar-brand {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link:hover {
+    color: #c74431;
+    border-radius: 0px;
+}
+
+.navbar-light-p .navbar-nav .show>.nav-link,
+.navbar-light-p .navbar-nav .active>.nav-link,
+.navbar-light-p .navbar-nav .nav-link.show,
+.navbar-light-p .navbar-nav .nav-link.active,
+.navbar-light-p .navbar-nav .nav-link:hover {
     color: #c74431;
     border-radius: 0px;
 }
@@ -899,34 +918,6 @@ p.paragraph {
 .about-right.two {
     float: left;
 }
-
-.about-left {
-    background: url(../images/ab.jpg)no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    min-height: 350px;
-    position: absolute;
-    left: 4%;
-    top: 12%;
-    z-index: 9;
-}
-
-.about-left.two {
-    background: url(../images/ab1.jpg)no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    min-height: 350px;
-    position: absolute;
-    left: 46%;
-    top: 12%;
-    z-index: 9;
-}
 .about-right h3 {
     color: #fff;
     font-size: 25px;
@@ -1289,7 +1280,7 @@ input#datepicker {
 }
 
 .text-box-light {
-    background: #FFF url("../images/calender.png") no-repeat 95% 50%;
+    background: #FFF url("../images/close.png") no-repeat 95% 50%;
     cursor: pointer;
     position: relative;
 }
@@ -1304,10 +1295,6 @@ input#datepicker {
 .payment-online-form-left textarea:hover {
     border-color: #636465;
     color: #5c5c5d;
-}
-
-.payment-date-section {
-    background: url("../images/calender.png") no-repeat #fff 50%;
 }
 
 .payment-sendbtns {
@@ -1868,7 +1855,7 @@ ul.links li a:hover {
 @media(max-width:1280px) {
 
     .banner_inner {
-        background: url(../images/banner4.jpg)no-repeat 0px -55px;
+        background: url(../images/banner2.jpg)no-repeat 0px -55px;
         background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -1935,6 +1922,10 @@ ul.links li a:hover {
     .navbar-light .navbar-nav .nav-link, .dropdown-item {
         margin: 0em 0em;
         padding: 20px 0px;
+    }
+    .navbar-light-p .navbar-nav .nav-link, .dropdown-item {
+        margin: 0em 0em;
+        padding: 20px;
     }
     .carousel-caption {
       bottom: 6em;
@@ -2032,7 +2023,7 @@ ul.links li a:hover {
 
 @media(max-width:991px) {
     .banner_inner {
-        background: url(../images/banner4.jpg)no-repeat 0px -20px;
+        background: url(../images/banner2.jpg)no-repeat 0px -20px;
         background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
