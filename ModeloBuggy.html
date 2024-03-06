@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>RESILIENCE | Modelo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="css/stylesModelos.css" rel="stylesheet"/>
+    <link rel="icon" href="images/logo.png">
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        #gui { position: absolute; top: 10px; left: 10px; background-color: rgba(255, 255, 255, 0.8); padding: 10px; transition: transform 0.3s ease; transform: translateY(-110%); }
+        #showHideButton { position: absolute; top: 10px; left: 10px; background-color: rgba(255, 255, 255, 0.8); padding: 5px 10px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div id="showHideButton">Mostrar GUI</div>
+    <div id="gui">
+        <label for="slider1">Grado de libertad 1:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider1"><br>
+        <label for="slider2">Grado de libertad 2:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider2"><br>
+        <label for="slider3">Grado de libertad 3:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider3"><br>
+        <label for="slider4">Grado de libertad 4:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider4"><br>
+        <label for="slider5">Grado de libertad 5:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider5"><br>
+        <label for="slider6">Grado de libertad 6:</label>
+        <input type="range" min="-180" max="180" step="1" value="0" id="slider6"><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="js/ThreeBrazo.js"></script>
+    <script>
+        const gui = document.getElementById('gui');
+        const showHideButton = document.getElementById('showHideButton');
+
+        showHideButton.addEventListener('click', () => {
+            if (gui.style.transform === 'translateY(-110%)') {
+                gui.style.transform = 'translateY(0)';
+                showHideButton.textContent = 'Ocultar GUI';
+            } else {
+                gui.style.transform = 'translateY(-110%)';
+                showHideButton.textContent = 'Mostrar GUI';
+            }
+        });
+    </script>
+  </body>
+</html>
