@@ -1,0 +1,198 @@
+.button-log a {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.overlay-login button.overlay-close1 {
+  z-index: 9999;
+  color: #fff;
+}
+
+.btn-open:after {
+  color: #333;
+  transition-property: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+}
+
+.btn-open:hover:after {
+  color: #34b484;
+}
+
+.overlay-login.open .btn-close:after {
+  color: #fff;
+  transition-property: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+  font-family: FontAwesome;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+}
+
+.btn-close:hover:after {
+  color: #34b484;
+}
+
+.overlay-login button.overlay-close1 {
+  z-index: 999;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 2px solid #7a7f7f;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 0;
+  overflow: hidden;
+}
+
+.overlay-login {
+  z-index: 9999;
+  -o-transition: .5s all;
+  background: #212529;
+  height: 100%;
+  padding: 3em;
+  transition: all .5s;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.wrap {
+  margin: 5em auto 0;
+}
+
+.wrap h5 {
+  color: #fff;
+  font-size: 2em;
+}
+
+.wrap ul.wrap-nav {
+  text-transform: capitalize;
+  border-bottom: 1px solid #575757;
+  padding: 150px 0 100px;
+}
+
+.wrap ul.wrap-nav li {
+  vertical-align: top;
+  width: 24%;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.wrap ul.wrap-nav li a {
+  color: #34b484;
+  transition-property: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+  padding: 8px 0;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  display: block;
+}
+
+.wrap ul.wrap-nav li a:hover {
+  color: #f0f0f0;
+}
+
+.wrap ul.wrap-nav ul {
+  padding: 20px 0;
+}
+
+.wrap ul.wrap-nav ul li {
+  color: #e9e9e9;
+  width: 100%;
+  font-size: 13px;
+  display: block;
+}
+
+.wrap ul.wrap-nav ul li a {
+  color: #f0f0f0;
+}
+
+.wrap ul.wrap-nav ul li a:hover {
+  color: #34b484;
+}
+
+.social {
+  padding: 20px;
+  font-size: 25px;
+}
+
+.social p {
+  margin: 0;
+  padding: 20px 0 5px;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.social p a {
+  color: #34b484;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.social-icon {
+  color: #333;
+  transition-property: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+  background: #e9e9e9;
+  width: 80px;
+  height: 50px;
+  margin: 0 20px;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  color: #f0f0f0;
+  background: #34b484;
+}
+
+.social-icon i {
+  margin-top: 12px;
+}
+
+@media screen and (width <= 48em) {
+  .wrap ul.wrap-nav > li {
+    border-bottom: 1px solid #575757;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .wrap ul.wrap-nav {
+    padding: 30px 0 0;
+  }
+
+  .social {
+    color: #c1c1c1;
+    padding: 15px 0;
+    font-size: 25px;
+  }
+
+  .social-icon {
+    color: #333;
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    display: block;
+  }
+}
+
+.content {
+  text-align: center;
+  color: #333;
+  width: 100%;
+  margin-top: 200px;
+  font-size: 20px;
+}
+/*# sourceMappingURL=partes.958b1f26.css.map */

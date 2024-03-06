@@ -1,0 +1,192 @@
+.mobile-nav-button {
+  z-index: 9;
+  position: absolute;
+  top: 24px;
+  right: 355px;
+}
+
+.overlay {
+  z-index: 99;
+  background: #0c0c0cfa;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.overlay .overlay-close {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 2px solid #7a7f7f;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  overflow: hidden;
+}
+
+.overlay form {
+  text-align: center;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button#trigger-overlay {
+  text-align: center;
+  color: #131415;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+}
+
+.search form input[type="search"] {
+  color: #fff;
+  -webkit-appearance: none;
+  letter-spacing: 4px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+  padding: 1em 1.5em;
+  font-size: 17px;
+}
+
+.search button.btn.btn-primary.submit {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: #c74431;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: .9em 3em;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .5s;
+}
+
+.overlay-door {
+  visibility: hidden;
+  width: 0;
+  transition: width .5s .3s, visibility 0s .8s;
+  left: 49.99%;
+  transform: translateX(-50%);
+}
+
+.overlay-door.open {
+  visibility: visible;
+  width: 100%;
+  transition: width .5s;
+}
+
+.overlay-door form {
+  width: 45%;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%)translateX(-50%);
+}
+
+.overlay-door form, .overlay-door .overlay-close {
+  opacity: 0;
+  transition: opacity .3s .5s;
+}
+
+.overlay-door.open form, .overlay-door.open .overlay-close {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+.overlay-door.close form, .overlay-door.close .overlay-close {
+  transition-delay: 0s;
+}
+
+@media (width <= 1366px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 24px;
+    right: 245px;
+  }
+}
+
+@media (width <= 1280px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 24px;
+    right: 230px;
+  }
+}
+
+@media (width <= 1080px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 24px;
+    right: 200px;
+  }
+}
+
+@media (width <= 1050px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 24px;
+    right: 195px;
+  }
+
+  .overlay-door form {
+    width: 70%;
+  }
+}
+
+@media (width <= 1024px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 24px;
+    right: 185px;
+  }
+}
+
+@media (width <= 767px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 36px;
+    right: 185px;
+  }
+}
+
+@media (width <= 640px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 36px;
+    right: 112px;
+  }
+
+  .overlay-door form {
+    width: 90%;
+  }
+}
+
+@media (width <= 480px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 36px;
+    right: 70px;
+  }
+}
+
+@media (width <= 375px) {
+  .mobile-nav-button {
+    position: absolute;
+    top: 36px;
+    right: 46px;
+  }
+}
+/*# sourceMappingURL=partes.b000366b.css.map */

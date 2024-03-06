@@ -1,0 +1,100 @@
+.simply-countdown-custom {
+  margin: 0 auto;
+  font-family: Poppins, sans-serif;
+  display: table;
+  overflow: hidden;
+}
+
+.simply-countdown-custom > .simply-section {
+  float: left;
+  color: #fff;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  font-size: 1em;
+  display: flex;
+}
+
+.simply-countdown-custom > .simply-section .simply-amount, .simply-countdown-custom > .simply-section .simply-word {
+  text-align: center;
+  display: block;
+}
+
+.simply-countdown-custom > .simply-section .simply-amount {
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 3px #00000080;
+  font-size: 4em;
+  font-weight: 600;
+}
+
+.simply-countdown-custom > .simply-section .simply-word {
+  text-shadow: 2px 2px 3px #00000080;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  font-weight: 500;
+}
+
+@media (width <= 991px) {
+  .simply-countdown-custom > .simply-section .simply-amount {
+    font-size: 2.5em;
+  }
+
+  .simply-countdown-custom > .simply-section {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+}
+
+@media (width <= 414px) {
+  .simply-countdown-custom > .simply-section {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+}
+
+@media (width <= 1080px) {
+  .simply-countdown-custom > .simply-section .simply-amount {
+    font-size: 3.5em;
+  }
+}
+
+@media (width <= 480px) {
+  .simply-countdown-custom > .simply-section .simply-amount {
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  .simply-countdown-custom > .simply-section {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+  }
+
+  .simply-countdown-custom > .simply-section .simply-word {
+    font-size: .7em;
+  }
+}
+
+@media (width <= 384px) {
+  .simply-countdown-custom > .simply-section .simply-word {
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+
+  .simply-countdown-custom > .simply-section {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+  }
+
+  .simply-countdown-custom > .simply-section .simply-word {
+    font-size: .6em;
+  }
+}
+/*# sourceMappingURL=partes.2ba1e589.css.map */
