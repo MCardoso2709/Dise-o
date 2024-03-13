@@ -312,7 +312,7 @@ header{
 .logo-nombre img {
     width: 120px; /* Ajusta el tamaño de tu logo según sea necesario */
     
-    margin-left: 610px; /* Espacio entre el logo y el texto */
+    margin-left: 660px; /* Espacio entre el logo y el texto */
 }
 
 .logo-nombre h1 {
