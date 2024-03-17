@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazo</title>
+    <style>
+/*CONTENEDOR 1 -CAMARA, GPS, GEMELO, FONDO*/
+
+body{
+    background-image: url(img/fondoneutro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+   
+}
+.container1 {
+    position: relative;
+    
+}
+
+
+.cont_sensores {
+    background-color: rgba(37, 36, 36, 0.89); /* Color de fondo del recuadro con opacidad */
+    border: 1px solid rgba(63, 63, 63); /* Borde del recuadro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 292px; /* Espaciado superior aumentado */
+    margin-right: 5px; /* Espaciado izquierdo ajustado */
+    width: 470px; /* Ancho del recuadro ajustado */
+    height: 208px; /* Altura del recuadro ajustada */
+    z-index: 999;
+    background-color: rgba(66, 65, 65, 0.349); /* Color de fondo del contenedor con opacidad */
+    /* Resto de estilos */
+       /* Resto de estilos */
+       position: absolute;
+       right: 30px;
+       z-index: 999;
+}
+.cont_menu {
+    background-color: rgba(37, 36, 36, 0.89);
+    border: 1px solid rgba(63, 63, 63);
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 580px;
+    margin-left: 20px;
+    margin-right: auto;
+    width: 1260px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+}
+/* Estilo básico para los botones del menú */
+
+/* Estilo para cambiar la opacidad al pasar el cursor sobre los botones */
+.menu_button:hover img {
+    opacity: 1; /* Hace que las imágenes sean más brillantes al pasar el cursor sobre ellas */
+}
+
+.menu_button {
+    
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    margin: 5px; /* Espacio entre botones */
+    bottom: 8px;
+    left: 500px; /* Espacio entre botones */
+    cursor: pointer;
+    overflow: hidden; /* Para que la imagen no se desborde del círculo */
+    position: relative; /* Posicionamiento relativo para alinear la imagen */
+}
+
+.menu_button img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del botón */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    position: absolute; /* Posicionamiento absoluto para alinear la imagen */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    opacity: 0.5; /* Hace que las imágenes sean más brillantes al pasar el cursor sobre ellas */
+}
+
+.menu_button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Cambia el color de fondo al pasar el cursor */
+}
+.menu_button:hover img {
+    filter: brightness(0.8); /* Reduce el brillo de la imagen al pasar el cursor */
+}
+
+
+
+
+.cont_video {
+   
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* O ajusta el ancho según tus necesidades */
+
+    width: 340px;
+    height: 230px;
+    z-index: 999;
+    margin-top: 10px;
+    margin-left: 435px;
+    border-radius: 15px; /* Redondear los bordes */
+    overflow: hidden; /* Para que la imagen redondeada no se desborde */
+    object-fit: cover; /* Ajustar la imagen para cubrir el contenedor */
+    border-radius: 15px; /* Redondear los bordes de la imagen */
+}
+
+.cont_video .video {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .cont_video {
+        width: 100%; /* Ajusta el ancho del video al 100% en dispositivos móviles */
+        margin: 0; /* Elimina el margen para centrar en dispositivos móviles */
+    }
+}
+
+
+.cont_mapa {
+    width: 870px;
+    height: 300px;
+    margin-left: 10px; /* Cambiar el valor según sea necesario */
+    margin-top: 10px;
+    border-radius: 15px; /* Redondear los bordes */
+    overflow: hidden; /* Para que la imagen redondeada no se desborde */
+    object-fit: cover; /* Ajustar la imagen para cubrir el contenedor */
+    border-radius: 15px; /* Redondear los bordes de la imagen */
+}
+
+.mapa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar la imagen para cubrir el contenedor */
+    border-radius: 15px; /* Redondear los bordes de la imagen */
+}
+
+.container1{
+    display: flex;
+}
+   /*CONTENEDOR ANGULOS DE LAS JUNTURAS*/
+.cont_gemelo {
+    background-color: rgba(66, 65, 65, 0.349); /* Color de fondo del contenedor con opacidad */
+    /* Resto de estilos */
+       /* Resto de estilos */
+       position: absolute;
+       top: 240px;
+       left: 30px;
+       z-index: 999;
+       
+     }
+   
+.cont_gemelo p {
+    margin: 5px 0;
+    display: inline-block;
+    left: 30px;
+}
+
+
+
+#contGemelo > div {
+    margin-right: 20px;
+}
+/*GEMELO DIGITAL*/
+.digital-twin {
+    background-color: rgba(37, 36, 36, 0.89); /* Color de fondo del recuadro con opacidad */
+    border: 1px solid rgba(63, 63, 63); /* Borde del recuadro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior aumentado */
+    margin-left: 20px; /* Espaciado izquierdo ajustado */
+    width: 380px; /* Ancho del recuadro ajustado */
+    height: 530px; /* Altura del recuadro ajustada */
+}
+
+.digital-twin  .gemelo-content img {
+    opacity: 1; /* Asegura que la imagen no tenga opacidad */
+}
+
+
+
+.digital-twin h2 {
+    font-size: 16px; /* Tamaño de la fuente del título */
+    margin-bottom: 10px; /* Espaciado inferior del título */
+}
+
+
+.gemelo-content {
+    
+    
+    color: white; /* Establece el color del texto como blanco */
+    border: 2px solid rgb(63, 63, 63); /* Agrega un borde blanco alrededor de los elementos */
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+    outline: none; /* Elimina el contorno al editar */
+}
+
+.digital-twin .gemelo-content img {
+    width: 100%; /* O ajusta el ancho según lo que desees */
+    height: 200px; /* Esto permite mantener la proporción original */
+}
+
+
+/* DATOS DE ARTICULACIONES*/
+/* DATOS DE ARTICULACIONES */
+/* DATOS DE ARTICULACIONES */
+#contGemelo {
+    color: white; /* Establece el color del texto como blanco */
+    width: 370px; /* Tamaño fijo del contenedor de junturas */
+    max-height: 200px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Agrega desplazamiento vertical si el contenido excede la altura máxima */
+    border: 1px solid rgba(63, 63, 63, 0.8); /* Borde del contenedor con opacidad */
+    padding: 5px;
+    border-radius: 10px; /* Redondea los bordes del contenedor */
+}
+
+/* Estilos para los elementos dentro del contenedor */
+/* Estilos para los elementos dentro del contenedor */
+
+#contGemelo p {
+    margin: 7px 5px; /* Centra verticalmente y agrega margen en los lados */
+    width: 80px; /* Tamaño fijo del contenedor */
+    font-size: 12px; /* Tamaño de la fuente más pequeño */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 8px; /* Redondea los bordes de los elementos */
+    border: 1px solid rgba(63, 63, 63, 0.5); /* Borde del contenedor con opacidad */
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo con opacidad */
+    margin-left: 17px; /* Agrega un margen izquierdo de 60px */
+    
+}
+
+
+
+
+
+
+
+
+/* slider*/
+
+.buttons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.joystick {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-top: 10px; /* Agrega margen superior de 60px */
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90px; /* Ancho del slider */
+    height: 13px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #d3d3d3, #ffffff);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.joystick input[type="number"] {
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 40px;
+    font-size: 10px;
+}
+.joystick label {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.joystick p {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/*CONTENEDOR 2 -BOTONES DE CONTROL */
+
+.container2{
+    display: flex;  
+    margin-top: 40px;  
+}
+
+
+/*HOME*/
+
+
+
+.botonHome, .abrirPinza, .cerrarPinza {
+    background-color: rgba(61, 64, 238, 0.548);
+    display: inline-block;
+    width: 90px; /* Ancho ajustado automáticamente al contenido */
+    padding: 10px 20px; /* Ajusta el padding para hacer el botón más rectangular */
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px; /* Conserva las esquinas redondeadas */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+    margin-right: 20px; /* Espacio entre los botones */
+    margin-left: 20px; /* Ajuste de margen izquierdo */
+    
+}
+
+.botonHome:hover, .abrirPinza:hover, .cerrarPinza:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el cursor */
+    color: rgb(238, 140, 61); /* Cambia el color del texto al pasar el cursor */
+}
+
+
+
+
+
+
+
+
+
+/*cONTENEDOR 3 - VISUALIZACIÓN DE DATOS*/
+
+.container3{
+    margin-top: 10px;
+}
+
+.styled-table{
+    border: 5px solid rgb(0, 0, 0);
+    margin: 5px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.15);
+    text-align: center;
+}
+
+.styled-table thead tr{
+    background-color: blue;
+    color: white;
+}
+
+.styled-table th, .styled-table td{
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr{
+    background-color: #f3f3f3;
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="digital-twin">
+            <div class="gemelo-content" contenteditable="true">
+                <!-- Aquí puedes agregar contenido interactivo -->
+                <img src="img/7gG6.gif" alt="GIF Interactivo">
+            </div>
+            <div class="cont_gemelo" id="contGemelo">
+                <div class="joint-group">
+                    <p>a0: <span id="a0"></span></p>
+                    <p>a1: <span id="a1"></span></p>
+                    <p>a2: <span id="a2"></span></p>
+                </div>
+                <div class="joint-group">
+                    <p>a3: <span id="a3"></span></p>
+                    <p>a4: <span id="a4"></span></p>
+                    <p>a5: <span id="a5"></span></p>
+                </div>
+            </div>
+            <div class="buttons">
+                <!-- Barras para controlar los grados de las articulaciones -->
+                
+            
+                 <!-- Botón HOME -->
+                <div class="home">
+                    <div class="botonHome">HOME</div>
+                    <p></p>
+                    <a href="/abrir=on" class="abrirPinza">ON</a>
+                    <p></p>
+                    <a href="/cerrar=off" class="cerrarPinza">OFF</a>
+                </div>
+                
+            
+                
+            </div>
+        </div>
+        <div class="cont_mapa">
+            <img src="/img/mapa_nuevo.png" alt="" class="mapa">
+        </div>  
+        <p>
+        <div class="container2">
+            <div class="cont_video">
+                <img class="video" width="560" height="315" src="{{ url_for('video_feed') }}" width="50%"
+                allowfullscreen></img>
+            </div>
+            <div class="cont_sensores" id="contSensores">
+                <canvas id="acelerometroChart" width="400" height="400"></canvas>
+            </div>
+            
+        </div></p>
+    <div class="cont_menu" id="contMenu">
+            <a href="/brazo=on"><button class="menu_button" id="homeButton"><img src="img/casa.jpg" alt="Home"></button></a>
+            <button class="menu_button" id="locationButton"><img src="img/ubicacion.jpg" alt="Location"></button>
+            <button class="menu_button" id="cameraButton"><img src="img/camara.jpg" alt="Camera"></button>
+            <a href="/brazo=off"></a><button class="menu_button" id="carButton"><img src="img/astro2.jpg" alt="Car"></button>
+        </div>
+        
+
+    </div>
+    
+
+    <script>
+       
+document.getElementById('homeButton').addEventListener('click', function() {
+    window.location.href = 'dash.html'; // Redirige al usuario a dash.html cuando se hace clic en el botón
+});
+
+// Declarar una variable global para el objeto del gráfico de acelerómetro
+var acelerometroChart;
+
+
+
+
+
+animate();
+
+
+
+// Obtener todos los botones del menú
+var menuButtons = document.querySelectorAll('.menu_button');
+
+// Iterar sobre cada botón y agregar un event listener para el evento 'mouseover'
+menuButtons.forEach(function(button) {
+    button.addEventListener('mouseover', function() {
+        // Obtener la imagen dentro del botón actual
+        var img = button.querySelector('img');
+        // Cambiar el filtro de la imagen para aumentar el brillo
+        img.style.filter = 'brightness(1.2)';
+    });
+
+    // Agregar un event listener para el evento 'mouseout' para restaurar el color original al dejar de pasar el cursor
+    button.addEventListener('mouseout', function() {
+        // Obtener la imagen dentro del botón actual
+        var img = button.querySelector('img');
+        // Restaurar el filtro de la imagen
+        img.style.filter = 'brightness(1)';
+    });
+});
+
+
+    </script>
+</body>
+
+</html>
